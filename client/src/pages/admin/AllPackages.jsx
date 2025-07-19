@@ -50,7 +50,7 @@ const AllPackages = () => {
         : filter === "top" //top rated
         ? `/api/package/get-packages?searchTerm=${search}&sort=packageRating&startIndex=${startIndex}`
         : `/api/package/get-packages?searchTerm=${search}&startIndex=${startIndex}`; //all
-    const res = await fetch(url);
+    const res = await fetch(https://travel-app-backend-22so.onrender.com);
     const data = await res.json();
     if (data?.packages?.length < 9) {
       setShowMoreBtn(false);
@@ -65,7 +65,7 @@ const AllPackages = () => {
   const handleDelete = async (packageId) => {
     try {
       setLoading(true);
-      const res = await fetch(`/api/package/delete-package/${packageId}`, {
+      const res = await fetch(`https://travel-app-backend-22so.onrender.com/api/package/delete-package/${packageId}`, {
         method: "DELETE",
       });
       const data = await res.json();
