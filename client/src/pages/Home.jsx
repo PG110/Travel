@@ -17,7 +17,7 @@ const Home = () => {
     try {
       setLoading(true);
       const res = await fetch(
-        "/api/package/get-packages?sort=packageRating&limit=8"
+        "https://travel-app-backend-22so.onrender.com/api/package/get-packages?sort=packageRating&limit=8"
       );
       const data = await res.json();
       if (data?.success) {
