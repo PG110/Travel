@@ -160,7 +160,7 @@ const AddPackages = () => {
       setLoading(true);
       setError(false);
 
-      const res = await fetch("/api/package/create-package", {
+      const res = await fetch("https://travel-app-backend-22so.onrender.com/api/package/create-package", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
