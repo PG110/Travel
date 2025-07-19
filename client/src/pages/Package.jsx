@@ -107,7 +107,7 @@ const Package = () => {
     }
     try {
       setLoading(true);
-      const res = await fetch("/api/rating/give-rating", {
+      const res = await fetch("https://travel-app-backend-22so.onrender.com/api/rating/give-rating", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -132,7 +132,7 @@ const Package = () => {
 
   const getRatings = async () => {
     try {
-      const res = await fetch(`/api/rating/get-ratings/${params.id}/4`);
+      const res = await fetch(`https://travel-app-backend-22so.onrender.com/api/rating/get-ratings/${params.id}/4`);
       const data = await res.json();
       if (data) {
         setPackageRatings(data);
@@ -147,7 +147,7 @@ const Package = () => {
   const checkRatingGiven = async () => {
     try {
       const res = await fetch(
-        `/api/rating/rating-given/${currentUser?._id}/${params?.id}`
+        `https://travel-app-backend-22so.onrender.com/api/rating/rating-given/${currentUser?._id}/${params?.id}`
       );
       const data = await res.json();
       setRatingGiven(data?.given);
